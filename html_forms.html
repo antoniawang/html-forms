@@ -39,11 +39,18 @@
     </table>    
     <p>Place your orders here! You know want to.</p>
 
-    <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+    <form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
 
         <label for="field-firstname">First Name </label><input type="text" name="firstname" id="field-firstname"><br>
 
-          <label for="field-lastname">Last Name </label><input type="text" name="lastname" id="field-lastname"><br>
+        <label for="field-lastname">Last Name </label><input type="text" name="lastname" id="field-lastname"><br>
+
+        <label for="field-email">Email </label><input type="email" name="email" id="field-email"><br>
+
+        <label for="field-url">Website </label><input type="url" name="homepage" id="field-url"><br>
+
+
+
 
         Melon Type <select name="melontype">
         <option value="watermelon">Watermelon</option>
@@ -53,7 +60,7 @@
         <option value="canary">Canary</option>
     </select><br>
 
-        <label>Quantity*: <input type="text" name="quantity"></label><br>
+        <label>Quantity*: <input type="number" name="quantity" min="1" max="10"></label><br>
 
     Delivery Time <input type="radio" name="time" value="am">12:00am-12:00pm 
         <input type="radio" name="time" value="pm">12:00pm-12:00am
